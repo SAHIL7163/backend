@@ -3761,3 +3761,7 @@
 2024 06 26	00:17:51	a04ada3c-4327-4043-af82-cfd07fce74ac	OPTIONS	https://blogsite-fwt6.onrender.com	/posts
 2024 06 26	00:17:51	488d7b93-0542-404d-b89f-0f91ee207c8f	GET	https://blogsite-fwt6.onrender.com	/refresh
 2024 06 26	00:17:51	46b234bd-f39a-40e2-b3fd-edcecb2ddcd0	GET	https://blogsite-fwt6.onrender.com	/posts
+2024 06 26	01:15:20	7a3897be-ef62-46eb-9d06-02ab88caccb3	OPTIONS	https://blogsite-fwt6.onrender.com	/refresh
+2024 06 26	01:15:20	7af46e33-1e38-4c49-9c35-15c39ec80f4e	OPTIONS	https://blogsite-fwt6.onrender.com	/posts
+2024 06 26	01:15:20	e64fe756-36cc-4273-b5bf-8ef879f9b28e	GET	https://blogsite-fwt6.onrender.com	/refresh
+2024 06 26	01:15:20	461f04fe-8f5c-4f3e-96f3-21b45a95848d	GET	https://blogsite-fwt6.onrender.com	/posts
