@@ -26,7 +26,7 @@ const handleLogin = async(req,res) =>
               }
           },
             process.env.ACCESS_TOKEN_SECRET ,
-            {expiresIn : '2m'}
+            {expiresIn : '1h'}
           )
         
           const refreshToken =jwt.sign(
