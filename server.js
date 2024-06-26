@@ -15,7 +15,8 @@ const path=require('path');
 const passport = require('passport');
 
 const mongoose = require('mongoose');
-const connectDB =require('./Config/dbConn')
+const connectDB =require('./Config/dbConn');
+const MongoStore = require('connect-mongo');
 const PORT = process.env.PORT || 3500 ;
 
 const { initializePassport } = require('./Controller/googleauthController');
@@ -44,13 +45,34 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-app.use(session({
+/* app.use(session({
     secret: process.env.GOOGLE_CLIENT_SECRET ,// Replace with your own secret key
     resave: false,
     saveUninitialized: true ,
     cookie : {secure : false },
 })
-);
+); */
+
+
+// Session management middleware
+app.use(session({
+    secret: process.env.GOOGLE_CLIENT_SECRET, // Replace with your own secret key
+    resave: false,
+    saveUninitialized: false,
+    store: MongoStore.create({ // Configure connect-mongo for session storage
+        mongoUrl: process.env.DATABASE_URI,
+        collectionName: 'sessions'
+    }),
+    cookie: {
+        secure: false,
+        maxAge: 1000 * 60 * 60 * 24 // 1 day
+    }
+}));
+
+
+
+
+
 app.use(passport.initialize());
 app.use(passport.session());
 initializePassport(passport);
