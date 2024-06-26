@@ -50,7 +50,7 @@ router.get('/callback',
     console.log(refreshToken);
     // Redirect the user to the frontend
    // res.redirect('http://localhost:3000/');
-   res.redirect(`https://blogsite-3gsy.onrender.com/`);
+   res.redirect(`https://blogsite-3gsy.onrender.com`);
   } catch (error) {
     console.error('Error handling Google callback:', error);
     // Handle errors if needed
