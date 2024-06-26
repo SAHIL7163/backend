@@ -98,8 +98,8 @@ app.use('/employee' , express.static(path.join(__dirname,'public'))); */
 app.use('/public' , express.static(path.join(__dirname,'public')));
 
 
-app.use('/' ,require('./router/root'));
-app.use('/subdir',require('./router/subdir'));
+//app.use('/' ,require('./router/root'));
+//app.use('/subdir',require('./router/subdir'));
 app.use('/register',require('./router/register'));
 app.use('/refresh',require('./router/refresh'));
 app.use('/logout',require('./router/logout'));
