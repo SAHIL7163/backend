@@ -5,8 +5,10 @@ const PostsController = require('../../Controller/PostsController');
 const verifyJWT = require('../../middleware/verifyJWT');
 const ROLES_LIST = require('../../Config/roles_list')
 const verifyRoles = require('../../middleware/verifyRoles') ;
+
+const storage = require('../../utils/cloudinary');
 const multer = require('multer');
-const upload = multer({dest:'public/img/upload/'})
+const upload = multer({ storage: storage })
 
 router.route('/')
  .get(PostsController.getAllPosts)
