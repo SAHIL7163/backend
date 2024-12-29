@@ -36,4 +36,8 @@ router.route('/:id/comments')
  .delete(verifyJWT ,verifyRoles(ROLES_LIST.Admin),PostsController.deletePost)
  .put(verifyJWT , upload.single('image'), verifyRoles(ROLES_LIST.Admin,ROLES_LIST.Editor),PostsController.updatePost)
 
+
+ module.exports = router;
+
+
  
